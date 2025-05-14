@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Mariachis - Restaurante Mexicano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">🌮 Los Mariachis</div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#menu">Cardápio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#reserva">Reserva</a></li>
+        <a href="https://www.instagram.com/losma_riachis?igsh=MThpZGkyZGJuanpwaA%3D%3D&utm_source=qr" target="_blank">Contato</a>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h1>Bem-vindo ao Los Mariachis</h1>
+    <p>Autêntica culinária mexicana no coração da cidade</p>
+    <a href="#reserva" class="btn">Reserve sua mesa</a>
+  </section>
+
+  <section id="menu" class="menu-section">
+    <h2>Nosso Cardápio</h2>
+    <div class="menu-filtros">
+      <button onclick="filtrarMenu('todos')">Todos</button>
+      <button onclick="filtrarMenu('Bebidas')">Bebidas</button>
+      <button onclick="filtrarMenu('principal')">Pratos Principais</button>
+      <button onclick="filtrarMenu('Veganos')">Veganos</button>
+    </div>
+    <div id="menu-itens" class="menu-grid"></div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <h2>Sobre Nós</h2>
+    <p>O El Mariachi traz o verdadeiro sabor do México com pratos tradicionais preparados com ingredientes frescos e temperos autênticos. Viva uma experiência gastronômica única com um ambiente colorido e acolhedor.</p>
+  </section>
+
+  <section id="reserva" class="reserva">
+  <h2>Faça sua Reserva</h2>
+    <div id="mensagem-reserva" class="mensagem-sucesso" style="display: none;">
+      🎉 Sua reserva foi enviada com sucesso!
+    </div>
+  <form id="reserva-form">
+    <input type="text" placeholder="Nome" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Telefone" required>
+    <input type="date" required>
+    <input type="time" required>
+    <input type="number" placeholder="Nº de pessoas" required>
+    <button type="submit">📆 Reservar</button>
+  </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 El Mariachi - Todos os direitos reservados</p>
+    <div class="redes">
+      Entre em contato pelo nosso: 
+      <a href="https://www.instagram.com/losma_riachis?igsh=MThpZGkyZGJuanpwaA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
