@@ -163,25 +163,62 @@ html {
   .sobre h2 {
     text-align: center;
   }
-  
   .reserva form {
-    display: grid;
-    gap: 10px;
-    padding: 10px;
-    max-width: 400px;
-    margin: auto;
-  }
-  
-  .reserva input, .reserva button {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
   }
 
-  .reserva h2 {
-    text-align: center;
+  .reserva input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s ease;
   }
-  
+
+  .reserva input:focus {
+  border-color: #d62828;
+  outline: none;
+  box-shadow: 0 0 5px rgba(214, 40, 40, 0.3);
+  }
+
+  .reserva button {
+  grid-column: span 2;
+  padding: 14px;
+  font-size: 18px;
+  background-color: #d62828;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .reserva button:hover {
+  background-color: #a61c1c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+  .reserva form {
+    grid-template-columns: 1fr;
+  }
+
+  .reserva button {
+    grid-column: span 1;
+  }
+  }
+
   footer {
     background-color: #e63946;
     color: white;
@@ -194,3 +231,36 @@ html {
     color: white;
     text-decoration: none;
   }
+
+  .mensagem-sucesso {
+  background-color: #38b000;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 4s ease-in-out;
+}
+
+/* Animação: aparece e depois some */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

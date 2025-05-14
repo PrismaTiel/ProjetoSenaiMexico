@@ -11,6 +11,13 @@ const menuItens = [
     { nome: "Margarita", tipo: "Bebidas", imagem: "Comidas/margarita.jpg" },
     { nome: "Refrigerante", tipo: "Bebidas", imagem: "Comidas/refri.jpg" },
     { nome: "Agua", tipo: "Bebidas", imagem: "Comidas/agua normal.jpg" },
+    { nome: "Quesadillas", tipo: "principal", imagem: "Comidas/Quesadillas.jpg" },
+    { nome: "Burritos", tipo: "principal", imagem: "Comidas/Borritos.jpg" },
+    { nome: "Ceviche", tipo: "principal", imagem: "Comidas/ceviche.jpg" },
+    { nome: "Enchiladas", tipo: "principal", imagem: "Comidas/Enchiladas.jpg" },
+    { nome: "Nachos", tipo: "principal", imagem: "Comidas/nachos.jpg" },
+    { nome: "Tacos", tipo: "Veganos", imagem: "Comidas/Tacos_Veganos.jpg" },
+    { nome: "Tamales Veganos", tipo: "Veganos", imagem: "Comidas/Tamales_Veganos.jpeg" },
 ];
   
   function carregarMenu(itens) {
@@ -34,12 +41,24 @@ const menuItens = [
       carregarMenu(filtrado);
     }
   }
-  
-  document.getElementById('reserva-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    document.getElementById('reserva-msg').textContent = 'Reserva recebida com sucesso! Entraremos em contato.';
-    this.reset();
-  });
+
+const form = document.getElementById("reserva-form");
+const mensagem = document.getElementById("mensagem-reserva");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Impede o recarregamento da página
+
+  // Mostra a mensagem
+  mensagem.style.display = "block";
+
+  // Esconde após 4 segundos
+  setTimeout(() => {
+    mensagem.style.display = "none";
+  }, 4000);
+
+  // Limpa os campos
+  form.reset();
+});
   
   // Carrega todos ao iniciar
   carregarMenu(menuItens);
