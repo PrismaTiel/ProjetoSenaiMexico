@@ -141,8 +141,11 @@ html {
   }
 
 .menu-item img {
+  width: 100%;
   height: auto;
-  max-height: 300px;
+  aspect-ratio: 4 / 3; /* mantém uma proporção legal */
+  object-fit: cover;
+  display: block;
 }
 
   .menu-item h3 {
