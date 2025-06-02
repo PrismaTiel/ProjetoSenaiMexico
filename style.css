@@ -13,6 +13,7 @@ html {
     background-color: #fffdf7;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
   }
   
   header {
@@ -125,14 +126,16 @@ html {
   gap: 20px;
 }
 
-  .menu-item {
-    transition: transform 0.2s;
-    border-radius: 15px;
-    overflow: hidden;
-    background: #d73838;
-    color: #ffffff;
-    transform: scale(1.0);
-  }
+ .menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #d73838;
+  color: #ffffff;
+  transition: transform 0.2s ease-in-out;
+}
 
   .menu-item:hover {
     border-radius: 15px;
@@ -143,7 +146,7 @@ html {
 .menu-item img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3; /* mantém uma proporção legal */
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
 }
@@ -321,4 +324,9 @@ html {
   nav ul li {
     margin: 10px 0;
   }
+}
+
+.menu-grid {
+  overflow-x: hidden;
+  padding: 0 10px;
 }
