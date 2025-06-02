@@ -62,3 +62,17 @@ form.addEventListener("submit", function(event) {
   
   // Carrega todos ao iniciar
   carregarMenu(menuItens);
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas(); // chama uma vez ao carregar
+
+document.getElementById("menu-toggle").addEventListener("click", () => {
+  const menu = document.querySelector("nav ul");
+  menu.classList.toggle("show");
+});
+
