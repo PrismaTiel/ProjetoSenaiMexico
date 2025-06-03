@@ -17,12 +17,13 @@ html {
   }
   
   header {
-    background-color: #d62828;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #d62828;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
   }
   
   header .logo {
@@ -289,6 +290,7 @@ html {
   border: none;
   color: white;
   cursor: pointer;
+  z-index: 1001;
 }
 
 @media (max-width: 768px) {
@@ -329,4 +331,35 @@ html {
 .menu-grid {
   overflow-x: hidden;
   padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #d62828;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    width: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav {
+    width: auto;
+  }
 }
