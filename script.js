@@ -11,8 +11,13 @@ const menuItens = [
   { nome: "Margarita", tipo: "Bebidas", imagem: "Comidas/margarita.jpg" },
   { nome: "Refrigerante", tipo: "Bebidas", imagem: "Comidas/refri.jpg" },
   { nome: "Agua", tipo: "Bebidas", imagem: "Comidas/agua normal.jpg" },
-  { nome: "Tacos", tipo: "Veganos", imagem: "Comidas/Tacos_Veganos.jpg" },
-  { nome: "Tamales Veganos", tipo: "Veganos", imagem: "Comidas/Tamales_Veganos.jpeg" },
+  { nome: "Quesadillas Veganas", tipo: "Veganos", imagem: "Comidas/Quesadillas_Veganas.png" },
+  { nome: "Burritos Veganos", tipo: "Veganos", imagem: "Comidas/Burritos_Veganos.png" },
+  { nome: "Ceviche Vegano", tipo: "Veganos", imagem: "Comidas/Ceviche_Vegano.png" },
+  { nome: "Enchiladas Veganas", tipo: "Veganos", imagem: "Comidas/Enchiladas_Veganas.png" },
+  { nome: "Nachos Veganos", tipo: "Veganos", imagem: "Comidas/Nachos_Veganos.png" },
+  { nome: "Tacos Veganos", tipo: "Veganos", imagem: "Comidas/Tacos_Veganos.jpg" },
+  { nome: "Tamales Veganos", tipo: "Veganos", imagem: "Comidas/Tamales_Veganos.png" },
 ];
 
 function carregarMenu(itens) {
