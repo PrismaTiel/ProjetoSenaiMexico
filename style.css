@@ -1,22 +1,24 @@
+/* ========== Reset ========== */
 html {
   scroll-behavior: smooth;
-  }
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fffdf7;
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-  
-  header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffdf7;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ========== Header ========== */
+header {
   background-color: #d62828;
   color: white;
   padding: 20px;
@@ -24,263 +26,50 @@ html {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  }
-  
-  header .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  nav ul {
-    list-style: none;
-    display: inline-flex;
-    gap: 15px;
-  }
-  
-  nav a {
-    position: relative;
-    display: inline-block;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: #ffb703;
-    padding: 8px 18px;
-    border-radius: 8px;
-    overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    z-index: 0;
-  }
-  
-  nav a::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background-color: #620000;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.4s ease, height 0.4s ease;
-    z-index: -1;
-  }
-  
-  nav a:hover::before {
-    width: 250%;
-    height: 250%;
-  }
-  
-  nav a:hover {
-    color: #ffb703;
-    transition: color 0.3s ease;
-  }  
-  
-  .hero {
-    background: url('Comidas/Arlete-Colecao-de-Habanero.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-  
-  .hero .btn {
-    color: #000;
-    background-color: #ffb703;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-    transition: 0.15s;
-  }
-
-  .hero .btn:hover {
-    color: #ffb703;
-    background-color: #620000;
-  }
-
-  .menu-section {
-    padding: 40px 20px;
-  }
-  
-  .menu-filtros {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .menu-filtros button {
-    margin: 0 5px;
-    padding: 10px 15px;
-    background: #e63946;
-    color: rgb(255, 255, 255);
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .menu-filtros button:hover {
-    background: #ca1c2b;
-  }
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
 }
 
- .menu-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 15px;
-  overflow: hidden;
-  background: #d73838;
-  color: #ffffff;
-  transition: transform 0.2s ease-in-out;
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-  .menu-item:hover {
-    border-radius: 15px;
-    background: #c02525;
-    transform: scale(1.05);
-  }
-
-.menu-item img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 15px;
 }
 
-  .menu-item h3 {
-    padding: 10px;
-    font-size: 18px;
-  }
-  
-  .sobre, .reserva {
-    padding: 50px;
-    background-color: #fafafa;
-  }
-
-  .sobre {
-    background-color: #ffb703;
-  }
-
-  .sobre h2 {
-    text-align: center;
-  }
-  .reserva form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: auto;
-  }
-
-  .reserva input {
-  padding: 12px;
-  font-size: 16px;
-  border: 2px solid #ccc;
+nav a {
+  position: relative;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #ffb703;
+  padding: 8px 18px;
   border-radius: 8px;
-  transition: 0.3s ease;
-  }
-
-  .reserva input:focus {
-  border-color: #d62828;
-  outline: none;
-  box-shadow: 0 0 5px rgba(214, 40, 40, 0.3);
-  }
-
-  .reserva button {
-  grid-column: span 2;
-  padding: 14px;
-  font-size: 18px;
-  background-color: #d62828;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .reserva button:hover {
-  background-color: #a61c1c;
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-  }
-
-  @media (max-width: 768px) {
-  .reserva form {
-    grid-template-columns: 1fr;
-  }
-
-  .reserva button {
-    grid-column: span 1;
-  }
-  }
-
-  footer {
-    background-color: #e63946;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .redes a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-  }
-
-  .mensagem-sucesso {
-  background-color: #38b000;
-  color: white;
-  padding: 15px 25px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-align: center;
-  margin: 20px auto;
-  max-width: 400px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  animation: fadeInOut 4s ease-in-out;
+  overflow: hidden;
+  z-index: 0;
 }
 
-/* Animação: aparece e depois some */
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  10% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
+nav a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #620000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+  border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
+nav a:hover::before {
+  transform: scaleX(1);
+}
 
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+nav a:hover {
+  color: #ffb703;
 }
 
 #menu-toggle {
@@ -293,62 +82,221 @@ html {
   z-index: 1001;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: #d62828;
-    position: absolute;
-    top: 70px;
-    right: 10px;
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
-  }
+/* ========== Hero Section ========== */
+.hero {
+  background: url('Comidas/Arlete-Colecao-de-Habanero.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
 
-  nav ul.show {
-    display: flex;
-  }
+.hero .btn {
+  background-color: #ffb703;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: 0.2s;
+}
 
-  #menu-toggle {
-    display: block;
-  }
+.hero .btn:hover {
+  background-color: #620000;
+  color: #ffb703;
+}
 
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+/* ========== Menu Section ========== */
+.menu-section {
+  padding: 40px 20px;
+}
 
-  nav {
-    width: 100%;
-  }
+.menu-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-  nav ul li {
-    margin: 10px 0;
-  }
+.menu-filtros button {
+  padding: 12px 24px;
+  background: #e63946;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap; /* Impede quebra dentro do botão */
+}
+
+.menu-filtros button:hover {
+  background: #ca1c2b;
+  transform: translateY(-2px);
 }
 
 .menu-grid {
-  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   padding: 0 10px;
 }
 
+.menu-item {
+  background: #d73838;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.menu-item:hover {
+  background: #c02525;
+  transform: scale(1.05);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* ========== Sobre Section ========== */
+.sobre {
+  background-color: #ffb703;
+  padding: 50px 20px;
+}
+
+.sobre h2 {
+  text-align: center;
+}
+
+/* ========== Reserva Section ========== */
+.reserva {
+  padding: 50px 20px;
+  background-color: #fafafa;
+}
+
+.reserva form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
+}
+
+.reserva input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.reserva input:focus {
+  border-color: #d62828;
+  outline: none;
+  box-shadow: 0 0 5px rgba(214, 40, 40, 0.3);
+}
+
+.reserva button {
+  grid-column: span 2;
+  padding: 14px;
+  font-size: 18px;
+  background-color: #d62828;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.reserva button:hover {
+  background-color: #a61c1c;
+  transform: scale(1.05);
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #e63946;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.redes a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* ========== Mensagem de Sucesso ========== */
+.mensagem-sucesso {
+  background-color: #38b000;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 4s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* ========== Responsivo ========== */
 @media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
+   header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+  .logo {
+    order: 1;
+  }
+
+   nav {
+    order: 3;
   }
 
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: #d62828;
     position: absolute;
-    top: 100%;
-    right: 20px;
-    width: 180px;
-    padding: 15px;
-    border-radius: 10px;
+    top: 70px;
+    right: 10px;
+    width: 160px; /* 🔻 Menor */
+    padding: 14px;
+    gap: 10px;
+    border-radius: 16px;
     z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(214, 40, 40, 0.65); /* 🔥 Vermelho com transparência */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   }
 
   nav ul.show {
@@ -356,10 +304,44 @@ html {
   }
 
   nav ul li {
-    margin: 10px 0;
+    width: 100%;
   }
 
-  nav {
-    width: auto;
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(255, 183, 3, 0.9); /* 🟨 Amarelo semi-transparente */
+    color: #000;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  nav ul li a:hover {
+    background-color: #ca1c2b;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+
+  #menu-toggle {
+    display: block;
+    order: 2;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .reserva form {
+    grid-template-columns: 1fr;
+  }
+
+  .reserva button {
+    grid-column: span 1;
   }
 }
