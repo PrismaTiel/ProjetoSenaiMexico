@@ -146,13 +146,13 @@ nav a:hover {
 }
 
 .menu-item {
-  background: #d73838;
-  color: white;
-  border-radius: 15px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #d73838;
+  color: white;
+  transition: transform 0.2s ease-in-out;
 }
 
 .menu-item:hover {
@@ -165,11 +165,25 @@ nav a:hover {
   height: auto;
   aspect-ratio: 4/3;
   object-fit: cover;
+  display: block;
 }
 
-.menu-item h3 {
-  padding: 10px;
+.menu-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.menu-info h3 {
   font-size: 18px;
+  margin: 0;
+}
+
+.menu-info .preco {
+  font-size: 14px;
+  color: #fdd835;
+  font-weight: bold;
 }
 
 /* ========== Sobre Section ========== */
